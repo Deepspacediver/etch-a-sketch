@@ -1,11 +1,15 @@
-#etch-container{
-    
-    width:100px;
-    height:100px;
+body{
+    display: flex;
 }
-.box{
-   display:inline-block;
+#etch-container{
+    width:480px;
+    height:480px;
+    background-color: rgb(221, 216, 216);
+    display: flex;
+    flex-wrap: wrap;
+}
+div.box{
     border: 1px solid red;
-    width:20px;
-    height: 20px;
+    flex-basis: 30px;
+    box-sizing: border-box;
 }
