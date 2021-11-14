@@ -15,5 +15,13 @@ createGrid(16, 16);
     //  }))
 
 container.addEventListener('mouseover', e => {
-    e.target.style.backgroundColor = 'purple';
+    e.target.classList.add('purple-background');
+})
+
+const button = document.getElementById('reset-btn');
+
+
+ button.addEventListener('click', ()=>{
+     const divs = document.querySelectorAll('.purple-background');
+     divs.forEach(el => el.classList.toggle('purple-background'));
 })
