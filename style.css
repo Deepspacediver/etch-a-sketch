@@ -13,3 +13,6 @@ div.box{
     flex-basis: 30px;
     box-sizing: border-box;
 }
+.purple-background{
+    background-color:purple;
+} 
