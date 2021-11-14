@@ -9,3 +9,11 @@ function createGrid(rows, columns){
 }
 
 createGrid(16, 16);
+
+// Array.from(container).forEach(div => div.addEventListener('mouseenter', (e)=> {
+    //      e.target.style.backgroundColor = 'purple';
+    //  }))
+
+container.addEventListener('mouseover', e => {
+    e.target.style.backgroundColor = 'purple';
+})
