@@ -8,11 +8,13 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-div.box{
+.box{
     border: 1px solid red;
     flex-basis: 30px;
     box-sizing: border-box;
+    background-color: black;
+    flex-grow: 1;
 }
-.purple-background{
-    background-color:purple;
+.new-background{
+    background-color:white;
 } 
