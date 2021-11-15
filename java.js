@@ -15,13 +15,26 @@ createGrid(16, 16);
     //  }))
 
 container.addEventListener('mouseover', e => {
-    e.target.classList.add('purple-background');
+    e.target.classList.add('new-background');
 })
 
 const button = document.getElementById('reset-btn');
 
 
  button.addEventListener('click', ()=>{
-     const divs = document.querySelectorAll('.purple-background');
-     divs.forEach(el => el.classList.toggle('purple-background'));
+     const divs = document.querySelectorAll('.new-background');
+     divs.forEach(el => el.classList.toggle('new-background'));
+     newGrid()
 })
+
+let userGrid;
+
+function newGrid(rows, columns){
+    const divs = document.getElementsByClassName('box') 
+    while(divs[0]){
+         divs[0].parentNode.removeChild(divs[0]);
+     }
+   let userChoice = prompt('Please input a number of squares per side for the new grid');
+   createGrid(userChoice, userChoice)
+    
+}
