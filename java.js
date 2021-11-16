@@ -1,5 +1,6 @@
 const container = document.getElementById('etch-container');
 
+
 function createGrid(rows, columns){
     for (let i =0; i<(rows * columns); i++){
         const divs = document.createElement('div');
@@ -10,31 +11,29 @@ function createGrid(rows, columns){
 
 createGrid(16, 16);
 
-// Array.from(container).forEach(div => div.addEventListener('mouseenter', (e)=> {
-    //      e.target.style.backgroundColor = 'purple';
-    //  }))
 
 container.addEventListener('mouseover', e => {
     e.target.classList.add('new-background');
 })
 
 const button = document.getElementById('reset-btn');
-
-
  button.addEventListener('click', ()=>{
      const divs = document.querySelectorAll('.new-background');
      divs.forEach(el => el.classList.toggle('new-background'));
      newGrid()
 })
 
-let userGrid;
 
-function newGrid(rows, columns){
+function newGrid(){
     const divs = document.getElementsByClassName('box') 
     while(divs[0]){
          divs[0].parentNode.removeChild(divs[0]);
-     }
-   let userChoice = prompt('Please input a number of squares per side for the new grid');
-   createGrid(userChoice, userChoice)
-    
+      }
+    let userChoice = prompt('Please input a number of squares per side for the new grid');
+    createGrid(userChoice, userChoice);
+    for(let i = 0; i<divs.length; i++){
+       let sizeOfContainer =  (480 / userChoice);  
+       divs[i].style.width = sizeOfContainer + 'px';
+       divs[i].style.height = sizeOfContainer + 'px';
+    }    
 }
