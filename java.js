@@ -13,8 +13,18 @@ createGrid(16, 16);
 
 
 container.addEventListener('mouseover', e => {
-    e.target.classList.add('new-background');
+   // e.target.classList.add('new-background');
+   const r = Math.floor(Math.random() * 256);
+   const g = Math.floor(Math.random() * 256);
+   const b = Math.floor(Math.random() * 256);
+   e.target.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 })
+
+// function colorGen() {
+//     const r = Math.floor(Math.random() * 256);
+//     const g = Math.floor(Math.random() * 256);
+//     const b = Math.floor(Math.random() * 256);
+//     e.target.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b +')';
 
 const button = document.getElementById('reset-btn');
  button.addEventListener('click', ()=>{
