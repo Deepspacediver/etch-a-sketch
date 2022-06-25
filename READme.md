@@ -1,3 +1,6 @@
+Etch-a-sketch project. Colors page with random colors by hovering a mouse on top of the container. Custom sizes input by the user. 
+
+
 create container for grid of divs
 create loop that takes two values
     amount of rows and amount for columms
